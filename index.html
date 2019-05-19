@@ -1,0 +1,143 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+    
+    <script type="text/javascript" src="js/webcam.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    
+</head>
+
+<body>
+
+    <canvas id="c"></canvas>
+    <script src="assets/js/main.min.js"></script>
+
+    <div class="header">
+        ch<span style="font-weight:400;">AI</span>n
+    </div>
+     <button id="new_contract" type="button" class="button" style="position: absolute;right: 150px;top: 25px;"><img src="/assets/plus.png" style="width:100%;"></img></button>
+     <button id="finished" type="button" class="button" style="position: absolute;right: 25px;top: 25px;"><img src="/assets/check2.png" style="width:100%;"></img></button>
+    <div class="parent">
+        <img class="graphic center-block" src="assets/box.dms" />
+        <img class="graphic3 center-block" src="assets/arrow.svg">
+
+        <img class="graphic2 center-block" src="assets/worker2.png" />
+        <img class="graphic3 center-block" src="assets/arrow.svg">
+        <img class="graphic center-block" src="assets/box2.png" />
+    </div>
+
+    <hr />
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm">
+                <!--col for Auftrag table-->
+                <div class="container" id="werker_ansicht">
+                    <div class="row">
+                        <div class="col-sm" style="margin-top: 60px; margin-bottom: 50px; margin-left: 60px;">
+                            <div class="auftrag">
+                                Auftrag <span id="contractName"></span>
+                            </div>
+                        </div><!-- The actual snackbar -->
+<div id="snackbar">Some text some message..</div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5 auftrText">
+                            <img src="assets/cross.png" id="img-1"
+                                style="width: 60px; height: auto; margin-left: 40px" />
+                            <img src="assets/schraube2.png" style="width: 70px; height: auto; margin-left: 20px" />
+                        </div>
+                        <div class="col-sm-4 auftrText" style="margin-top: 10px;">
+                            5 x 60 mm
+                        </div>
+                        <div class="col-sm-3 auftrText" style="margin-top: 10px;">
+                            <span id="schrauben_delivered">0</span> / <span id="schrauben">n.a.</span>  St.
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-5 auftrText">
+                            <img src="assets/cross.png" id="img-2"
+                                style="width: 60px; height: auto; margin-left: 40px" />
+                            <img src="assets/duebel2.png" style="width: 70px; height: auto; margin-left: 20px;" />
+                        </div>
+                        <div class="col-sm-4 auftrText" style="margin-top: 20px">
+                            5 x 51 mm
+                        </div>
+                        <div class="col-sm-3 auftrText" style="margin-top: 20px">
+                            <span id="duebel_delivered">0</span> / <span id="duebel">n.a.</span>  St.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <!--col for camera view-->
+                <div style="position: relative">
+                    <div id="my_camera">
+                    </div>
+                    <canvas id="drawings" style="z-index: 100; position: absolute">
+
+                    </canvas>
+                    
+                </div>
+
+            </div>
+            <div class="col-sm" style="margin: 50px">
+                <!--col for contract table-->
+                <div class="auftrag" style="font-size: 80px; margin-left: 50px">
+                    E O S
+                </div>
+                <div style="text-align: right;">
+                    <img src="assets/eos_logo.png" style="width: 200px; height: auto; margin-top: -200px;" />
+                </div>
+                <br>
+                <br>
+                <div class="contractName">
+                    Contract: <span id="contract_uuid"></span>
+                </div>
+                <table class="table" style="margin-left: 30px">
+                    <thead>
+                        <tr>
+                            <th scope="col">Objekt</th>
+                            <th scope="col">Anzahl</th>
+                            <th scope="col">Belohnung</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dataRow">
+                        <tr>
+                            <td>Schraube</td>
+                            <td id="contract_schrauben"></td>
+                            <td><span id="reward_schrauben"></span> EOS</td>
+                        </tr>
+                        <tr>
+                            <td>Dübel</td>
+                            <td id="contract_duebel"></td>
+                            <td><span id="reward_duebel"></span> EOS</td>
+                        </tr>
+                    </tbody>
+                </table>
+              <!--  <div id="timeRemaining" class="timeRemaining"> </div>-->
+            </div> 
+        
+        </div>
+        <div id="slider" id="slider" class="slidecontainer">
+            <div id="slider_text">Schwellwert <span id="slider_threshold_text"></span>%</div>
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">              
+        </div>
+    </div>
+    <!-- The actual snackbar -->
+<div id="snackbar">Some text some message..</div>
+</body>
+
+</html>

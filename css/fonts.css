@@ -1,0 +1,7 @@
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Roboto'), local('Roboto-Regular');
+}
