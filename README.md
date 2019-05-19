@@ -9,18 +9,19 @@ more info: https://medium.com/p/8dcfebebb2d6
 # requirements
 
 * python3
-* nodeJs
 
 # use instructions
-for serving html stuff
+Change the raspberry url in file js/main.js in line 168:
+
+~~~
+url: "http://192.168.0.2:5000/"
+~~~
+
+Start the frontend with
 ```
-http-server
+sh RUN.sh 
 ```
 
-Python object recognition server which gets image as input
-```
-cd detection_server && sh RUN.sh 
-```
+Then open your browser at  
 
-to view files go to 
-- localhost:8080
+[localhost:8000](localhost:8000)
